@@ -1,0 +1,14 @@
+pipeline {
+    agent {
+        docker {
+            image 'python:3-slim'
+        }
+    }
+    stages {
+        stage('test') {
+            steps {
+                    sh 'python --version'
+            }
+        }
+    }
+}
